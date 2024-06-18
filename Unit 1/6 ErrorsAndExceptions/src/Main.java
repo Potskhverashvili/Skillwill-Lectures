@@ -1,30 +1,34 @@
+import java.io.FileInputStream;
+
 public class Main {
     public static void main(String[] args) {
 
         // --------- Error ---------
-        /*throw new AssertionError("Eroria jigaro");*/
+
 
         // --------- Run Time Exceptions ----------
-        /*int[] arr = new int[20];
-        arr[20] = 20;*/
+        int[] arr = new int[20];
+        arr[1] = 20;
 
         // -------- Checked Exceptions --------
 
-        /*try (FileInputStream fis = new FileInputStream(new File("test.txt"))) {
-            fis.read();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
-
-       Car car1 = new Car("BMW");
-
-       Car car2 = new Car("BMW");
-
-        System.out.println(car1.equals(car2));
-        System.out.println(car2.hashCode());
+        System.out.println(getResult(10, 5));
+        System.out.println(getResult(10,0));
 
 
 
+    }
+
+
+    static int getResult(int a, int b) {
+        try {
+            return (a / b);
+        } catch (ArithmeticException e) {
+            System.out.println("shecdomaa jigaroo");
+            return -1;
+
+        } finally {
+            return 9;
+        }
     }
 }
