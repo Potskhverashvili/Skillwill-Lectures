@@ -10,7 +10,7 @@ public class Main {
 
         Triangle triangle = new Triangle(2, 5);
 
-        System.out.println();
+        System.out.println(triangle.calculateArea());
 
 
     }

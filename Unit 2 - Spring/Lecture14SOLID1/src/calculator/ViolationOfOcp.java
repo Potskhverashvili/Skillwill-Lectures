@@ -14,8 +14,6 @@ public class ViolationOfOcp {
             Rectangle rectangle = (Rectangle) shape;
             return rectangle.getLength() * rectangle.getWidth();
         }
-
         return  0;
     }
-
 }
