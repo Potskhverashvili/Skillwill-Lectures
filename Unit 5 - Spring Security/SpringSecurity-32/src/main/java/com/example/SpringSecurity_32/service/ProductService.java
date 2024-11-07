@@ -25,6 +25,7 @@ public class ProductService {
     private final UserProductsRepository userProductsRepository;
 
     public Long create(ProductCreatedRequest productCreatedRequest) {
+
         // Get Logged-in user Id
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         long principal = (long) authentication.getPrincipal();
